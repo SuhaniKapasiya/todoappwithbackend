@@ -13,7 +13,10 @@ const cors = require("cors");
 const PORT = process.env.PORT || 5000;
 app.use(
   cors({
-    origin: "http://localhost:3000", // Allow your frontend origin
+    origin: ["http://localhost:3000",
+             "https://todo-frontend-demo-suhani-n1qgf7hn0-ghshivamkashyaps-projects.vercel.app/",
+             "https://todo-frontend-demo-suhani-n1qgf7hn0-ghshivamkashyaps-projects.vercel.app"
+            ] ,// Allow your frontend origin
     methods: ["GET", "POST", "PUT", "DELETE"], // Allow necessary methods
     allowedHeaders: ["Content-Type", "Authorization"], // Allow necessary headers
   })
